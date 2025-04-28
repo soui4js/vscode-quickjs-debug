@@ -26,7 +26,7 @@ interface CommonArguments extends SourcemapArguments {
 	port: number;
 	console?: ConsoleType;
 	trace?: boolean;
-	env?: EnvironmentVariable;
+	env?: EnvironmentVariable[];
 }
 interface LaunchRequestArguments extends CommonArguments, DebugProtocol.LaunchRequestArguments {
 }

@@ -1,3 +1,11 @@
+# Building
+* install nodejs
+* intall yarn
+* run command
+yarn install
+yarn compile
+yarn package
+
 # QuickJS Debug for VS Code
 
 This is a VS Code debug adapter for [QuickJS](https://bellard.org/quickjs/).

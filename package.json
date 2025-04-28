@@ -14,7 +14,7 @@
 	],
 	"engines": {
 		"vscode": "^1.33.0",
-		"node": "^10.15.1"
+		"node": "^22.15.0"
 	},
 	"icon": "images/quickjs-debug-icon.png",
 	"categories": [
@@ -48,7 +48,7 @@
 		"@types/mocha": "5.2.7",
 		"typescript": "3.5.3",
 		"mocha": "6.2.0",
-		"vscode": "1.1.36",
+		"vscode": "1.1.37",
 		"vscode-debugadapter-testsupport": "1.37.0",
 		"tslint": "5.18.0",
 		"vsce": "1.66.0"

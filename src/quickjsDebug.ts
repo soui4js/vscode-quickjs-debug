@@ -11,6 +11,11 @@ const Parser = require('stream-parser');
 const Transform = require('stream').Transform;
 const { Subject } = require('await-notify');
 
+interface EnvironmentVariable {
+	name: string;
+	value: string;
+}
+
 interface CommonArguments extends SourcemapArguments {
 	program: string;
 	args?: string[];
@@ -21,6 +26,7 @@ interface CommonArguments extends SourcemapArguments {
 	port: number;
 	console?: ConsoleType;
 	trace?: boolean;
+	env?: EnvironmentVariable;
 }
 interface LaunchRequestArguments extends CommonArguments, DebugProtocol.LaunchRequestArguments {
 }
@@ -235,6 +241,13 @@ export class QuickJSDebugSession extends SourcemapSession {
 		this.closeServer();
 
 		let env = {};
+		if (args.env) {
+			//console.log("环境变量配置：");
+			for (const envVar of args.env) {
+				env[envVar.name] = envVar.value;
+			}
+		}
+
 		try {
 			this.beforeConnection(env);
 		}

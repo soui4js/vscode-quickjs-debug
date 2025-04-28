@@ -145,6 +145,11 @@
 								"default": {
 									"${workspaceFolder}/out/main.quickjs.js.map": "${workspaceFolder}/src"
 								}
+							},
+							"env": {
+								"type": "object",
+								"description": "The user defined environment variables.",
+								"default": []
 							}
 						}
 					},
